@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+
+{%load static%}
+{%block main_block%}
+<div class="container">
+    <div style="display: grid; place-items: center; height: 50px; ">
+    <img src="{%static 'images/signup.png'%}" class="rounded mx-auto d-block mt-4"  alt="width=100px height=100px">
+   
+    <form action="" method="post">
+        {%csrf_token%}
+        {{form.as_p}}
+        <button type="submit">Register</button>
+        already user <a href="{%url 'signin' %}">signin</a>
+    </form>
+    </div>
+</div>
+{%endblock%}

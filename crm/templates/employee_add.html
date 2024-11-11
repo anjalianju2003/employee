@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+
+{%load static%}
+
+{%block main_block%}
+
+<div class="container">
+    <div style="display: grid; place-items: center; height: 50px; ">
+
+    <img src="{%static 'images/emp.png'%}" class="rounded mx-auto d-block mt-4" alt="" width="200px" height="200px">
+
+    <h2>Add Employee</h2>
+
+    <form action="" method="post" enctype="multipart/form-data">
+
+        {%csrf_token%}
+
+        {{form.as_p}}
+
+        <button type="button" class="btn btn-secondary">Submit</button>
+
+    </form>
+
+</div>
+
+{%endblock%}
